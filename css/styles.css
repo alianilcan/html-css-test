@@ -5,12 +5,15 @@ body {
 .flex-container {
   display: flex;
   flex-direction: row;
-  gap: 0.5rem;
+  gap: 1rem;
   padding: 10px;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
   background-color: #2b3e5c;
   border-radius: 10px;
   margin: 20px;
+  max-height: 115px;
+  overflow: hidden;
+  wrap: nowrap;
 }
 
 .flex-item-column {
@@ -24,10 +27,26 @@ body {
   flex-direction: column;
   display: flex;
   gap: 0px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .flex-item-row {
+  flex: 2;
+  /* background-color: black; */
+  color: white;
+  border: 1px solid black;
+  padding-left: 0px;
+  padding-top: 5px;
+  font-family: Inter;
+  font-size: 13px;
+  flex-direction: column;
+  display: flex;
+  gap: 7px;
+  flex-wrap: nowrap;
+  /* justify-content: space-between; */
+}
+
+.flex-item-row-space-between {
   flex: 1;
   /* background-color: black; */
   color: white;
@@ -35,11 +54,12 @@ body {
   padding-left: 0px;
   padding-top: 5px;
   font-family: Inter;
-  flex-direction: row;
+  font-size: 13px;
+  flex-direction: column;
   display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  gap: 7px;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
 
 .flex-item1 img {
@@ -59,4 +79,32 @@ body {
 
 .flex-grow {
   flex-grow: 1;
+}
+
+.horizontal-group-start {
+  display: flex;
+  flex-direction: row; /* Keeps Test and Draft side by side */
+  gap: 15px; /* Matches the gap in flex-item-row */
+  justify-content: flex-start;
+}
+
+.horizontal-group-end {
+  display: flex;
+  flex-direction: row; /* Keeps Test and Draft side by side */
+  gap: 15px; /* Matches the gap in flex-item-row */
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+
+.button-style {
+  display: flex;
+  font-size: 17px;
+  max-width: 150px;
+  align-self: flex-end;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.event-title {
+  font-size: 18px;
 }
